@@ -11,3 +11,95 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  text-align: center;
+}
+
+.main-header {
+  background-color: #483434;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 30px !important;
+  color:#d9d9d9;
+}
+
+.container {
+  width: 1500px !important;
+  height: 850px;
+  margin: auto;
+  margin-top: 20px;
+  background-color:#6B4F4F;
+}
+
+.brand-heading {
+  width: 700px;
+  height: 30px;
+  background-color: #FFF3E4;
+  color: #483434;
+  text-align: center;
+  float: right;
+  margin-top: 10%;
+  margin-right: 50px;
+  padding:10px;
+  padding-bottom: 30px;
+}
+
+.shopping-list {
+  width: 700px;
+  height: 250px;
+  text-align: center;
+  float: right;
+  margin-top: 10%;
+  margin-right: 50px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.shopping-cart {
+  width: 700px;
+  height: 350px;
+  margin-top: 10px;
+  margin-right: 50px;
+  text-align: center;
+  float: right;
+  border: 5px dashed #d9d9d9;
+  border-radius: 10px;
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #6C4A4A;
+}
+
+.phone{
+  display: inline-block !important;
+  width: 10rem !important;
+  margin: 0 1em 1em 0.25em !important;
+  padding: .5em !important;
+  cursor: pointer;
+  background: #f7f7f7 !important;
+
+}
+.mycart-header{
+  margin-top: 20px !important;
+  color: rgb(238, 248, 240); 
+  background-color: #483434;
+}
+.my-cart{
+  text-align: left;
+  margin-top: 100px;
+  border: 5px solid #d9d9d9;
+}
+.cart-item{
+  float: right;
+}
+.meta{
+  font-size: 8px !important;
+}
+
+.drag{
+  background-color: lightblue !important;
+}
