@@ -1,26 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import 'semantic-ui-css/semantic.min.css'
+import { _getPhones } from '../utils/_DATA'
+import { receivePhones } from '../actions/phones'
+import Container from './Container'
+import '../index.css'
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  
+    componentDidMount(){
+    _getPhones()
+        .then(phones => {
+            this.props.dispatch(receivePhones(phones))
+        })
+  }
+
+  render() {
+    const { phones } = this.props
+
+    return(
+        <Container phones={phones} />
+    );
+  }
 }
 
-export default App;
+function mapStateToProps({ phones }) {
+  return {
+      phones
+  }
+}
+
+export default connect(mapStateToProps)(App);
